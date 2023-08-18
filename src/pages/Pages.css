@@ -1,0 +1,13 @@
+.form-box-in{
+    margin: 0, auto;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    padding-right: 45%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+
+}

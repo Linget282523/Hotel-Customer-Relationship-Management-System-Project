@@ -1,40 +1,31 @@
-
-import './App.sass';
-import json from 'firebase-data.json';
+import './App.css';
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAccounts, fetchRooms } from "./actions"; // Создайте actions соответственно
+// import { fetchAccounts, fetchRooms } from "./actions";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 
 function App() {
   const dispatch = useDispatch();
-  const { accounts, rooms, error } = useSelector((state) => state);
 
-  useEffect(() => {
-    dispatch(fetchAccounts());
-    dispatch(fetchRooms());
-  }, [dispatch]);
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // useEffect(() => {
+  //   dispatch(fetchAccounts());
+  //   dispatch(fetchRooms());
+  // }, [dispatch]);
 
   return (
+    <BrowserRouter>
     <div className="App">
-      <h1>Accounts:</h1>
-      <ul>
-        {accounts.map((account) => (
-          <li key={account.id}>{account.name}</li>
-        ))}
-      </ul>
-
-      <h1>Rooms:</h1>
-      <ul>
-        {rooms.map((room) => (
-          <li key={room.id}>{room.name}</li>
-        ))}
-      </ul>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/register' element={<RegisterPage/>}/>
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 

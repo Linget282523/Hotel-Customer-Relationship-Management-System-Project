@@ -1,0 +1,33 @@
+.form-box{
+    margin: 0, auto;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    width: 500px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.input-box {
+    display: inline-flex;
+
+}
+
+.input-box p{
+    margin-top: 10px;
+}
+
+button {
+
+    background-color: rgb(121, 168, 232);
+    border: 0 solid rgb(121, 168, 232);
+    width: 80px;
+    height: 30px;
+}
+
+.button:hover {
+    background-color: rgb(104, 155, 190);
+}

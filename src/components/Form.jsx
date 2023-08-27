@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Form.css';
+import { Link } from 'react-router-dom';
 
 const Form = ({title, handleClick}) => {
 
@@ -30,7 +31,8 @@ const Form = ({title, handleClick}) => {
       <button className='button'
         onClick={handleClick}
       >
-        {title}
+        {title} 
+        {/* <Link to='/rooms'/> */}
       </button>
       </div>
     </div>

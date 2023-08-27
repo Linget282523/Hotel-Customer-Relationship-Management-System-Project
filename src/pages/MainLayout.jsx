@@ -1,14 +1,21 @@
 import React from 'react'
+import { Login } from '../components/Login'
+import { Link } from 'react-router-dom'
 
 const MainLayout = () => {
   return (
     <div>
-        <div className='title'>
-            <h1></h1>
+      <header>
+        <div className='logo'>
+            <img src="./../FE-2-design_favicon" alt="" />
         </div>
-        <div className='content'>
+        <div className='login-button'>
+          <button><Link to='/login'/>Log out</button>
+        </div>
+      </header>
+      <div className='content'>
 
-        </div>
+      </div>
 
     </div>
   )

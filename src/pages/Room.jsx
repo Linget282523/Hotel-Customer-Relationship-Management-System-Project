@@ -3,8 +3,6 @@ import { Layout, Space } from 'antd';
 import SiderRoom from './components/SiderRoom';
 import ContentRoom from './components/ContentRoom';
 import FooterRoom from './components/FooterRoom';
-import { db } from '../firebase';
-import { collection } from '@firebase/firestore';
 import HeaderRoom from './components/HeaderRoom';
 import Link from 'antd/es/typography/Link';
 

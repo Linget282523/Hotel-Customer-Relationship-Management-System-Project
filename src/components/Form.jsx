@@ -32,7 +32,7 @@ const Form = ({title, handleClick}) => {
         onClick={handleClick}
       >
         {title} 
-        {/* <Link to='/rooms'/> */}
+        <Link to='/table'/>
       </button>
       </div>
     </div>

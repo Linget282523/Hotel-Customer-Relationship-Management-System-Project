@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import {Button, Space, Table} from 'antd';
 import '../firebase'
-import { db } from '../firebase';
+import { database } from '../firebase';
 import { collection } from '@firebase/firestore';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ function TableRooms() {
   const [columns, setColumns] = useState([]);
   const [dataSource, setDataSource] = useState([]);
 
-  const dataType = collection(db, 'Rooms');
+  const dataType = collection(database, 'Rooms');
   useEffect(() => {
     fetch(`https://hcrms-project-default-rtdb.europe-west1.firebasedatabase.app/${dataType}`)
     .then(res => res.json())
